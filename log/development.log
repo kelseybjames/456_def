@@ -1,0 +1,1303 @@
+  [1m[36m (119.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (87.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateEmployees (20160208161820)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160208161820"]]
+  [1m[35m (142.8ms)[0m  commit transaction
+Migrating to CreateTeams (20160208162547)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160208162547"]]
+  [1m[35m (119.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProgressReports (20160208162920)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "progress_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160208162920"]]
+  [1m[36m (78.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Nathan"], ["last_name", "Schmidt"], ["email", "brittany_kaulke@watsica.net"], ["created_at", "2016-02-08 16:43:58.873862"], ["updated_at", "2016-02-08 16:43:58.873862"]]
+  [1m[35m (187.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Ramiro"], ["last_name", "Doyle"], ["email", "scot_schneider@vandervort.io"], ["created_at", "2016-02-08 16:43:59.068330"], ["updated_at", "2016-02-08 16:43:59.068330"]]
+  [1m[36m (173.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Brielle"], ["last_name", "Kassulke"], ["email", "roderick.abernathy@medhurst.org"], ["created_at", "2016-02-08 16:43:59.245293"], ["updated_at", "2016-02-08 16:43:59.245293"]]
+  [1m[35m (176.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Carlie"], ["last_name", "Toy"], ["email", "nico_kuhic@grantvonrueden.co"], ["created_at", "2016-02-08 16:43:59.423703"], ["updated_at", "2016-02-08 16:43:59.423703"]]
+  [1m[36m (199.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Evangeline"], ["last_name", "Spencer"], ["email", "jorge_tillman@gaylordbecker.io"], ["created_at", "2016-02-08 16:43:59.625364"], ["updated_at", "2016-02-08 16:43:59.625364"]]
+  [1m[35m (153.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Dangelo"], ["last_name", "Hirthe"], ["email", "john@fadel.biz"], ["created_at", "2016-02-08 16:43:59.781338"], ["updated_at", "2016-02-08 16:43:59.781338"]]
+  [1m[36m (164.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Cleveland"], ["last_name", "Hagenes"], ["email", "lucienne@legroshudson.com"], ["created_at", "2016-02-08 16:43:59.948101"], ["updated_at", "2016-02-08 16:43:59.948101"]]
+  [1m[35m (187.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Rey"], ["last_name", "Schoen"], ["email", "judd_moore@barton.info"], ["created_at", "2016-02-08 16:44:00.137186"], ["updated_at", "2016-02-08 16:44:00.137186"]]
+  [1m[36m (198.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Korey"], ["last_name", "Zemlak"], ["email", "mekhi@mclaughlinstokes.com"], ["created_at", "2016-02-08 16:44:00.337576"], ["updated_at", "2016-02-08 16:44:00.337576"]]
+  [1m[35m (176.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Leonor"], ["last_name", "Wyman"], ["email", "chelsey@greenfelder.biz"], ["created_at", "2016-02-08 16:44:00.515748"], ["updated_at", "2016-02-08 16:44:00.515748"]]
+  [1m[36m (198.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Marty"], ["last_name", "Fritsch"], ["email", "delphine.heel@goldner.io"], ["created_at", "2016-02-08 16:44:00.716162"], ["updated_at", "2016-02-08 16:44:00.716162"]]
+  [1m[35m (187.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Nelle"], ["last_name", "Volkman"], ["email", "casimir_kohler@deckowhermiston.com"], ["created_at", "2016-02-08 16:44:00.905437"], ["updated_at", "2016-02-08 16:44:00.905437"]]
+  [1m[36m (209.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Clair"], ["last_name", "Kub"], ["email", "kenyon@hartmannfisher.org"], ["created_at", "2016-02-08 16:44:01.116927"], ["updated_at", "2016-02-08 16:44:01.116927"]]
+  [1m[35m (187.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Vella"], ["last_name", "Schuppe"], ["email", "neal_balistreri@jenkins.co"], ["created_at", "2016-02-08 16:44:01.306088"], ["updated_at", "2016-02-08 16:44:01.306088"]]
+  [1m[36m (209.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Nash"], ["last_name", "Klein"], ["email", "saige_sanford@effertz.co"], ["created_at", "2016-02-08 16:44:01.517590"], ["updated_at", "2016-02-08 16:44:01.517590"]]
+  [1m[35m (244.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Valentin"], ["last_name", "Hoeger"], ["email", "vilma@vandervort.com"], ["created_at", "2016-02-08 16:44:01.764013"], ["updated_at", "2016-02-08 16:44:01.764013"]]
+  [1m[36m (210.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Jaron"], ["last_name", "Luettgen"], ["email", "blaze@jastkemmer.name"], ["created_at", "2016-02-08 16:44:01.977158"], ["updated_at", "2016-02-08 16:44:01.977158"]]
+  [1m[35m (207.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Jillian"], ["last_name", "Rice"], ["email", "nat@greenfelderhane.com"], ["created_at", "2016-02-08 16:44:02.187568"], ["updated_at", "2016-02-08 16:44:02.187568"]]
+  [1m[36m (187.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Winfield"], ["last_name", "Jones"], ["email", "bridget@schuppe.co"], ["created_at", "2016-02-08 16:44:02.376862"], ["updated_at", "2016-02-08 16:44:02.376862"]]
+  [1m[35m (209.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Reva"], ["last_name", "Corkery"], ["email", "clementina_nitzsche@hagenes.net"], ["created_at", "2016-02-08 16:44:02.588282"], ["updated_at", "2016-02-08 16:44:02.588282"]]
+  [1m[36m (209.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36m (153.9ms)[0m  [1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (189.6ms)[0m  CREATE TABLE "progress_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (166.0ms)[0m  [1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (173.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (144.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (166.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160208162920')
+  [1m[36m (255.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160208161820')[0m
+  [1m[35m (167.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160208162547')
+  [1m[36m (187.5ms)[0m  [1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (188.5ms)[0m  CREATE TABLE "progress_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (211.7ms)[0m  [1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (177.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (177.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (177.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160208162920')
+  [1m[36m (798.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160208161820')[0m
+  [1m[35m (211.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160208162547')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Keagan"], ["last_name", "Bergstrom"], ["email", "ernest.nicolas@braundickinson.info"], ["created_at", "2016-02-08 16:46:55.841314"], ["updated_at", "2016-02-08 16:46:55.841314"]]
+  [1m[35m (207.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Jerrell"], ["last_name", "Metz"], ["email", "janis@quigley.net"], ["created_at", "2016-02-08 16:46:56.053641"], ["updated_at", "2016-02-08 16:46:56.053641"]]
+  [1m[36m (183.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Mae"], ["last_name", "Jakubowski"], ["email", "burdette.krajcik@kihn.org"], ["created_at", "2016-02-08 16:46:56.241261"], ["updated_at", "2016-02-08 16:46:56.241261"]]
+  [1m[35m (164.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Palma"], ["last_name", "Weissnat"], ["email", "beverly@veum.info"], ["created_at", "2016-02-08 16:46:56.408397"], ["updated_at", "2016-02-08 16:46:56.408397"]]
+  [1m[36m (186.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Heaven"], ["last_name", "Treutel"], ["email", "matilda@mcglynn.name"], ["created_at", "2016-02-08 16:46:56.597638"], ["updated_at", "2016-02-08 16:46:56.597638"]]
+  [1m[35m (154.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Kariane"], ["last_name", "Bins"], ["email", "tyreek.kuphal@runolfon.org"], ["created_at", "2016-02-08 16:46:56.754754"], ["updated_at", "2016-02-08 16:46:56.754754"]]
+  [1m[36m (142.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Sigmund"], ["last_name", "Abshire"], ["email", "gus@kaulkegleason.co"], ["created_at", "2016-02-08 16:46:56.899596"], ["updated_at", "2016-02-08 16:46:56.899596"]]
+  [1m[35m (142.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Willa"], ["last_name", "White"], ["email", "zackary_bauch@funk.org"], ["created_at", "2016-02-08 16:46:57.044797"], ["updated_at", "2016-02-08 16:46:57.044797"]]
+  [1m[36m (163.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Birdie"], ["last_name", "Beatty"], ["email", "graciela@hayes.io"], ["created_at", "2016-02-08 16:46:57.211694"], ["updated_at", "2016-02-08 16:46:57.211694"]]
+  [1m[35m (186.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Jeremie"], ["last_name", "Nitzsche"], ["email", "monte@kaulke.net"], ["created_at", "2016-02-08 16:46:57.400919"], ["updated_at", "2016-02-08 16:46:57.400919"]]
+  [1m[36m (164.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Monserrat"], ["last_name", "Kuhn"], ["email", "ludie_greenfelder@wisozkpredovic.org"], ["created_at", "2016-02-08 16:46:57.567749"], ["updated_at", "2016-02-08 16:46:57.567749"]]
+  [1m[35m (187.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Leonel"], ["last_name", "Gutmann"], ["email", "zachery_schmidt@rodriguez.org"], ["created_at", "2016-02-08 16:46:57.757228"], ["updated_at", "2016-02-08 16:46:57.757228"]]
+  [1m[36m (165.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Monroe"], ["last_name", "Hettinger"], ["email", "antoinette_glover@kleinbednar.biz"], ["created_at", "2016-02-08 16:46:57.924252"], ["updated_at", "2016-02-08 16:46:57.924252"]]
+  [1m[35m (187.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Dallin"], ["last_name", "Hartmann"], ["email", "arnoldo@kirlin.biz"], ["created_at", "2016-02-08 16:46:58.113682"], ["updated_at", "2016-02-08 16:46:58.113682"]]
+  [1m[36m (164.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Leonie"], ["last_name", "Lubowitz"], ["email", "jennings_streich@klein.biz"], ["created_at", "2016-02-08 16:46:58.280583"], ["updated_at", "2016-02-08 16:46:58.280583"]]
+  [1m[35m (188.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Kaley"], ["last_name", "Orn"], ["email", "rhea.haag@block.org"], ["created_at", "2016-02-08 16:46:58.471113"], ["updated_at", "2016-02-08 16:46:58.471113"]]
+  [1m[36m (165.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Alfonso"], ["last_name", "Johns"], ["email", "patrick@pfannerstill.biz"], ["created_at", "2016-02-08 16:46:58.639211"], ["updated_at", "2016-02-08 16:46:58.639211"]]
+  [1m[35m (142.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Elenor"], ["last_name", "Huels"], ["email", "michale.simonis@okon.io"], ["created_at", "2016-02-08 16:46:58.783482"], ["updated_at", "2016-02-08 16:46:58.783482"]]
+  [1m[36m (187.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Angelina"], ["last_name", "Kohler"], ["email", "ron.mueller@goldnermueller.co"], ["created_at", "2016-02-08 16:46:58.972708"], ["updated_at", "2016-02-08 16:46:58.972708"]]
+  [1m[35m (165.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Virgil"], ["last_name", "Bode"], ["email", "marisol_wisozk@mcglynn.name"], ["created_at", "2016-02-08 16:46:59.139710"], ["updated_at", "2016-02-08 16:46:59.139710"]]
+  [1m[36m (187.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36m (156.0ms)[0m  [1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (187.7ms)[0m  CREATE TABLE "progress_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (166.6ms)[0m  [1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (187.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (155.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (166.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160208162920')
+  [1m[36m (189.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160208161820')[0m
+  [1m[35m (166.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160208162547')
+  [1m[36m (187.6ms)[0m  [1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (166.4ms)[0m  CREATE TABLE "progress_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (199.9ms)[0m  [1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (177.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (199.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (177.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160208162920')
+  [1m[36m (200.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160208161820')[0m
+  [1m[35m (177.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160208162547')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Garnet"], ["last_name", "Deckow"], ["email", "general@wisozkruel.co"], ["created_at", "2016-02-08 16:47:18.614281"], ["updated_at", "2016-02-08 16:47:18.614281"]]
+  [1m[35m (259.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Chyna"], ["last_name", "Hettinger"], ["email", "marjorie@herzog.co"], ["created_at", "2016-02-08 16:47:18.878038"], ["updated_at", "2016-02-08 16:47:18.878038"]]
+  [1m[36m (164.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Robert"], ["last_name", "Casper"], ["email", "amir_huels@schiller.org"], ["created_at", "2016-02-08 16:47:19.045328"], ["updated_at", "2016-02-08 16:47:19.045328"]]
+  [1m[35m (186.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Marcel"], ["last_name", "Batz"], ["email", "delphine@langworth.net"], ["created_at", "2016-02-08 16:47:19.234711"], ["updated_at", "2016-02-08 16:47:19.234711"]]
+  [1m[36m (164.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ronaldo"], ["last_name", "Keebler"], ["email", "kamren@cronin.name"], ["created_at", "2016-02-08 16:47:19.401459"], ["updated_at", "2016-02-08 16:47:19.401459"]]
+  [1m[35m (187.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Gust"], ["last_name", "Muller"], ["email", "gwendolyn@mertzdubuque.info"], ["created_at", "2016-02-08 16:47:19.590734"], ["updated_at", "2016-02-08 16:47:19.590734"]]
+  [1m[36m (153.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Rosalia"], ["last_name", "Halvorson"], ["email", "danny.vandervort@macgyverhayes.name"], ["created_at", "2016-02-08 16:47:19.746582"], ["updated_at", "2016-02-08 16:47:19.746582"]]
+  [1m[35m (165.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Meaghan"], ["last_name", "Osinski"], ["email", "kaylee@kulaskerluke.info"], ["created_at", "2016-02-08 16:47:19.913818"], ["updated_at", "2016-02-08 16:47:19.913818"]]
+  [1m[36m (186.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Savion"], ["last_name", "Gottlieb"], ["email", "anthony_goldner@thompson.org"], ["created_at", "2016-02-08 16:47:20.103052"], ["updated_at", "2016-02-08 16:47:20.103052"]]
+  [1m[35m (165.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Brody"], ["last_name", "Jones"], ["email", "david@kuvalis.biz"], ["created_at", "2016-02-08 16:47:20.270088"], ["updated_at", "2016-02-08 16:47:20.270088"]]
+  [1m[36m (177.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Martina"], ["last_name", "Heidenreich"], ["email", "lonie.stamm@heel.biz"], ["created_at", "2016-02-08 16:47:20.449506"], ["updated_at", "2016-02-08 16:47:20.449506"]]
+  [1m[35m (176.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Lura"], ["last_name", "Ziemann"], ["email", "hershel_dooley@kunzevandervort.name"], ["created_at", "2016-02-08 16:47:20.627749"], ["updated_at", "2016-02-08 16:47:20.627749"]]
+  [1m[36m (198.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ezra"], ["last_name", "Stokes"], ["email", "amya_ward@schaefer.name"], ["created_at", "2016-02-08 16:47:20.828763"], ["updated_at", "2016-02-08 16:47:20.828763"]]
+  [1m[35m (174.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Tremaine"], ["last_name", "Daniel"], ["email", "nolan@brekke.info"], ["created_at", "2016-02-08 16:47:21.006401"], ["updated_at", "2016-02-08 16:47:21.006401"]]
+  [1m[36m (198.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Holly"], ["last_name", "Rowe"], ["email", "jayce@keeblergislason.io"], ["created_at", "2016-02-08 16:47:21.206960"], ["updated_at", "2016-02-08 16:47:21.206960"]]
+  [1m[35m (176.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Bert"], ["last_name", "Aufderhar"], ["email", "jermain@hegmann.org"], ["created_at", "2016-02-08 16:47:21.385064"], ["updated_at", "2016-02-08 16:47:21.385064"]]
+  [1m[36m (198.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Marcellus"], ["last_name", "Schoen"], ["email", "werner_grimes@torp.info"], ["created_at", "2016-02-08 16:47:21.585450"], ["updated_at", "2016-02-08 16:47:21.585450"]]
+  [1m[35m (176.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Armani"], ["last_name", "Franecki"], ["email", "mark.wintheiser@kling.info"], ["created_at", "2016-02-08 16:47:21.763686"], ["updated_at", "2016-02-08 16:47:21.763686"]]
+  [1m[36m (198.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Viviane"], ["last_name", "Fisher"], ["email", "furman@johns.com"], ["created_at", "2016-02-08 16:47:21.964063"], ["updated_at", "2016-02-08 16:47:21.964063"]]
+  [1m[35m (153.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Maximillia"], ["last_name", "Rolfson"], ["email", "jaquan@pfefferaufderhar.biz"], ["created_at", "2016-02-08 16:47:22.119788"], ["updated_at", "2016-02-08 16:47:22.119788"]]
+  [1m[36m (177.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Darrick"], ["last_name", "Jast"], ["email", "leilani@hillshuel.com"], ["created_at", "2016-02-08 16:48:56.500675"], ["updated_at", "2016-02-08 16:48:56.500675"]]
+  [1m[35m (163.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Tabitha"], ["last_name", "Brown"], ["email", "grover@mclaughlin.info"], ["created_at", "2016-02-08 16:48:56.669368"], ["updated_at", "2016-02-08 16:48:56.669368"]]
+  [1m[36m (197.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Dejon"], ["last_name", "Leuschke"], ["email", "brionna@boyle.name"], ["created_at", "2016-02-08 16:48:56.869839"], ["updated_at", "2016-02-08 16:48:56.869839"]]
+  [1m[35m (176.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Ahmad"], ["last_name", "Spencer"], ["email", "mohammad_carroll@farrell.name"], ["created_at", "2016-02-08 16:48:57.047908"], ["updated_at", "2016-02-08 16:48:57.047908"]]
+  [1m[36m (198.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Randal"], ["last_name", "Bartell"], ["email", "rebeka@wuckertsimonis.net"], ["created_at", "2016-02-08 16:48:57.248229"], ["updated_at", "2016-02-08 16:48:57.248229"]]
+  [1m[35m (154.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Michelle"], ["last_name", "Schmeler"], ["email", "elbert_champlin@konopelski.com"], ["created_at", "2016-02-08 16:48:57.404216"], ["updated_at", "2016-02-08 16:48:57.404216"]]
+  [1m[36m (153.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gwen"], ["last_name", "Considine"], ["email", "rudy_waelchi@torphy.io"], ["created_at", "2016-02-08 16:48:57.560061"], ["updated_at", "2016-02-08 16:48:57.560061"]]
+  [1m[35m (176.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Ernesto"], ["last_name", "Hickle"], ["email", "nicholaus@bashirianohara.name"], ["created_at", "2016-02-08 16:48:57.738275"], ["updated_at", "2016-02-08 16:48:57.738275"]]
+  [1m[36m (220.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Odie"], ["last_name", "Thiel"], ["email", "ashton@kihn.co"], ["created_at", "2016-02-08 16:48:57.960812"], ["updated_at", "2016-02-08 16:48:57.960812"]]
+  [1m[35m (176.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Stefanie"], ["last_name", "Price"], ["email", "jovanny.batz@walshwunsch.org"], ["created_at", "2016-02-08 16:48:58.139001"], ["updated_at", "2016-02-08 16:48:58.139001"]]
+  [1m[36m (198.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Beatrice"], ["last_name", "Harvey"], ["email", "justen_dach@fritsch.co"], ["created_at", "2016-02-08 16:48:58.339379"], ["updated_at", "2016-02-08 16:48:58.339379"]]
+  [1m[35m (176.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Rachelle"], ["last_name", "Balistreri"], ["email", "dandre@sanford.info"], ["created_at", "2016-02-08 16:48:58.517533"], ["updated_at", "2016-02-08 16:48:58.517533"]]
+  [1m[36m (198.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Marcelo"], ["last_name", "Wisoky"], ["email", "ariel@bergstromwolf.net"], ["created_at", "2016-02-08 16:48:58.717879"], ["updated_at", "2016-02-08 16:48:58.717879"]]
+  [1m[35m (177.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Stevie"], ["last_name", "Crist"], ["email", "lempi_monahan@heidenreich.name"], ["created_at", "2016-02-08 16:48:58.897116"], ["updated_at", "2016-02-08 16:48:58.897116"]]
+  [1m[36m (187.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Jeffrey"], ["last_name", "Cassin"], ["email", "elvera@vonruedenglover.net"], ["created_at", "2016-02-08 16:48:59.086550"], ["updated_at", "2016-02-08 16:48:59.086550"]]
+  [1m[35m (153.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Martin"], ["last_name", "Hane"], ["email", "gilda.mitchell@parker.name"], ["created_at", "2016-02-08 16:48:59.242462"], ["updated_at", "2016-02-08 16:48:59.242462"]]
+  [1m[36m (164.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Iva"], ["last_name", "Renner"], ["email", "myrtice_dickens@flatley.name"], ["created_at", "2016-02-08 16:48:59.409509"], ["updated_at", "2016-02-08 16:48:59.409509"]]
+  [1m[35m (198.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Winona"], ["last_name", "Purdy"], ["email", "amani@greenholt.net"], ["created_at", "2016-02-08 16:48:59.610019"], ["updated_at", "2016-02-08 16:48:59.610019"]]
+  [1m[36m (176.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Maria"], ["last_name", "Mills"], ["email", "heath@purdy.info"], ["created_at", "2016-02-08 16:48:59.788065"], ["updated_at", "2016-02-08 16:48:59.788065"]]
+  [1m[35m (198.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Consuelo"], ["last_name", "Haag"], ["email", "merlin@watsica.com"], ["created_at", "2016-02-08 16:48:59.988484"], ["updated_at", "2016-02-08 16:48:59.988484"]]
+  [1m[36m (176.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Maud"], ["last_name", "Mosciski"], ["email", "margarete@kozey.name"], ["created_at", "2016-02-08 16:49:12.882235"], ["updated_at", "2016-02-08 16:49:12.882235"]]
+  [1m[35m (195.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Karlee"], ["last_name", "Roob"], ["email", "tiana@rutherford.biz"], ["created_at", "2016-02-08 16:49:13.081048"], ["updated_at", "2016-02-08 16:49:13.081048"]]
+  [1m[36m (198.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Charlotte"], ["last_name", "Lynch"], ["email", "rahul@cummingsheaney.net"], ["created_at", "2016-02-08 16:49:13.281392"], ["updated_at", "2016-02-08 16:49:13.281392"]]
+  [1m[35m (176.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Harmon"], ["last_name", "Rogahn"], ["email", "everett@pollichmarvin.biz"], ["created_at", "2016-02-08 16:49:13.459554"], ["updated_at", "2016-02-08 16:49:13.459554"]]
+  [1m[36m (198.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Amy"], ["last_name", "Mertz"], ["email", "judson.fritsch@funk.net"], ["created_at", "2016-02-08 16:49:13.660036"], ["updated_at", "2016-02-08 16:49:13.660036"]]
+  [1m[35m (176.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Elliott"], ["last_name", "Cremin"], ["email", "levi@dare.info"], ["created_at", "2016-02-08 16:49:13.838132"], ["updated_at", "2016-02-08 16:49:13.838132"]]
+  [1m[36m (198.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Valentina"], ["last_name", "Feest"], ["email", "tia@doyle.info"], ["created_at", "2016-02-08 16:49:14.038529"], ["updated_at", "2016-02-08 16:49:14.038529"]]
+  [1m[35m (176.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Rosalinda"], ["last_name", "Herman"], ["email", "emelia_skiles@homenickkuhlman.net"], ["created_at", "2016-02-08 16:49:14.216605"], ["updated_at", "2016-02-08 16:49:14.216605"]]
+  [1m[36m (198.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Jasen"], ["last_name", "Littel"], ["email", "asa.wehner@nitzsche.co"], ["created_at", "2016-02-08 16:49:14.417014"], ["updated_at", "2016-02-08 16:49:14.417014"]]
+  [1m[35m (177.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Lilly"], ["last_name", "Rosenbaum"], ["email", "doug@ward.org"], ["created_at", "2016-02-08 16:49:14.596424"], ["updated_at", "2016-02-08 16:49:14.596424"]]
+  [1m[36m (187.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ivory"], ["last_name", "Mitchell"], ["email", "isaias_jacobs@bartonhalvorson.io"], ["created_at", "2016-02-08 16:49:14.785633"], ["updated_at", "2016-02-08 16:49:14.785633"]]
+  [1m[35m (154.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Ceasar"], ["last_name", "King"], ["email", "nat@zemlak.io"], ["created_at", "2016-02-08 16:49:14.941600"], ["updated_at", "2016-02-08 16:49:14.941600"]]
+  [1m[36m (176.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Jermain"], ["last_name", "Labadie"], ["email", "selina.ledner@bergnaum.biz"], ["created_at", "2016-02-08 16:49:15.119773"], ["updated_at", "2016-02-08 16:49:15.119773"]]
+  [1m[35m (198.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Rubye"], ["last_name", "Hermiston"], ["email", "jasen.bahringer@schmidtbrown.info"], ["created_at", "2016-02-08 16:49:15.320113"], ["updated_at", "2016-02-08 16:49:15.320113"]]
+  [1m[36m (176.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Furman"], ["last_name", "Bins"], ["email", "wilford_koch@murphy.io"], ["created_at", "2016-02-08 16:49:15.498403"], ["updated_at", "2016-02-08 16:49:15.498403"]]
+  [1m[35m (198.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Melisa"], ["last_name", "Weimann"], ["email", "ella@crookshansen.io"], ["created_at", "2016-02-08 16:49:15.698708"], ["updated_at", "2016-02-08 16:49:15.698708"]]
+  [1m[36m (176.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Reta"], ["last_name", "Bashirian"], ["email", "mara.emmerich@sporer.co"], ["created_at", "2016-02-08 16:49:15.876730"], ["updated_at", "2016-02-08 16:49:15.876730"]]
+  [1m[35m (198.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Ryder"], ["last_name", "Boyer"], ["email", "katharina.kiehn@willms.com"], ["created_at", "2016-02-08 16:49:16.077166"], ["updated_at", "2016-02-08 16:49:16.077166"]]
+  [1m[36m (176.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Tiana"], ["last_name", "Weber"], ["email", "delta.cain@cronin.name"], ["created_at", "2016-02-08 16:49:16.255331"], ["updated_at", "2016-02-08 16:49:16.255331"]]
+  [1m[35m (199.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Jessika"], ["last_name", "Jacobi"], ["email", "cornell.ullrich@wolff.biz"], ["created_at", "2016-02-08 16:49:16.457011"], ["updated_at", "2016-02-08 16:49:16.457011"]]
+  [1m[36m (153.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 1]]
+  [1m[36m (162.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 2]]
+  [1m[35m (188.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 3]]
+  [1m[36m (154.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 4]]
+  [1m[35m (155.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 5]]
+  [1m[36m (178.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 6]]
+  [1m[35m (199.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 7]]
+  [1m[36m (177.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 8]]
+  [1m[35m (199.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 9]]
+  [1m[36m (177.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 10]]
+  [1m[35m (199.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 11]]
+  [1m[36m (177.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 12]]
+  [1m[35m (199.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 13]]
+  [1m[36m (176.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 14]]
+  [1m[35m (244.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 15]]
+  [1m[36m (201.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 16]]
+  [1m[35m (199.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 17]]
+  [1m[36m (177.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 18]]
+  [1m[35m (199.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 19]]
+  [1m[36m (176.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 20]]
+  [1m[35m (199.3ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 21]]
+  [1m[36m (266.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 22]]
+  [1m[35m (177.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 23]]
+  [1m[36m (200.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 24]]
+  [1m[35m (176.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 25]]
+  [1m[36m (199.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 26]]
+  [1m[35m (177.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 27]]
+  [1m[36m (199.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 28]]
+  [1m[35m (176.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 29]]
+  [1m[36m (221.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 30]]
+  [1m[35m (176.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 31]]
+  [1m[36m (177.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 32]]
+  [1m[35m (188.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 33]]
+  [1m[36m (199.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 34]]
+  [1m[35m (200.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 35]]
+  [1m[36m (199.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 36]]
+  [1m[35m (177.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 37]]
+  [1m[36m (199.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 38]]
+  [1m[35m (177.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 39]]
+  [1m[36m (244.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 40]]
+  [1m[35m (187.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 41]]
+  [1m[36m (154.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 42]]
+  [1m[35m (177.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 43]]
+  [1m[36m (199.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 44]]
+  [1m[35m (177.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 45]]
+  [1m[36m (187.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 46]]
+  [1m[35m (155.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 47]]
+  [1m[36m (177.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 48]]
+  [1m[35m (199.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 49]]
+  [1m[36m (177.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 50]]
+  [1m[35m (177.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 51]]
+  [1m[36m (177.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 52]]
+  [1m[35m (188.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 53]]
+  [1m[36m (166.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 54]]
+  [1m[35m (400.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 55]]
+  [1m[36m (143.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 56]]
+  [1m[35m (343.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 57]]
+  [1m[36m (188.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 58]]
+  [1m[35m (165.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 59]]
+  [1m[36m (155.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 60]]
+  [1m[35m (133.0ms)[0m  commit transaction
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mProgressReport Load (0.2ms)[0m  SELECT "progress_reports".* FROM "progress_reports"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Santino"], ["last_name", "Lindgren"], ["email", "else@stiedemannspinka.info"], ["created_at", "2016-02-08 16:53:01.256320"], ["updated_at", "2016-02-08 16:53:01.256320"]]
+  [1m[36m (178.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Jerry"], ["last_name", "Padberg"], ["email", "gideon@willms.org"], ["created_at", "2016-02-08 16:53:01.437490"], ["updated_at", "2016-02-08 16:53:01.437490"]]
+  [1m[35m (187.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Scottie"], ["last_name", "Davis"], ["email", "peggie_dicki@rowe.info"], ["created_at", "2016-02-08 16:53:01.626758"], ["updated_at", "2016-02-08 16:53:01.626758"]]
+  [1m[36m (422.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Kurt"], ["last_name", "Jones"], ["email", "raul@buckridge.biz"], ["created_at", "2016-02-08 16:53:02.051123"], ["updated_at", "2016-02-08 16:53:02.051123"]]
+  [1m[35m (187.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Erik"], ["last_name", "Sanford"], ["email", "loy.hodkiewicz@pollich.net"], ["created_at", "2016-02-08 16:53:02.240371"], ["updated_at", "2016-02-08 16:53:02.240371"]]
+  [1m[36m (342.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Madison"], ["last_name", "Lemke"], ["email", "jennie@lednerdaugherty.net"], ["created_at", "2016-02-08 16:53:02.584660"], ["updated_at", "2016-02-08 16:53:02.584660"]]
+  [1m[35m (430.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Miller"], ["last_name", "Kuphal"], ["email", "macy@von.info"], ["created_at", "2016-02-08 16:53:03.017639"], ["updated_at", "2016-02-08 16:53:03.017639"]]
+  [1m[36m (552.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Jody"], ["last_name", "Ruecker"], ["email", "ansel.macgyver@lockmanstanton.com"], ["created_at", "2016-02-08 16:53:03.572218"], ["updated_at", "2016-02-08 16:53:03.572218"]]
+  [1m[35m (154.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Nathanial"], ["last_name", "Walter"], ["email", "gaetano.ruel@anderson.biz"], ["created_at", "2016-02-08 16:53:03.728152"], ["updated_at", "2016-02-08 16:53:03.728152"]]
+  [1m[36m (187.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Theron"], ["last_name", "Huels"], ["email", "dell@wintheiser.com"], ["created_at", "2016-02-08 16:53:03.917487"], ["updated_at", "2016-02-08 16:53:03.917487"]]
+  [1m[35m (165.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Clemens"], ["last_name", "Witting"], ["email", "ashley@bradtke.net"], ["created_at", "2016-02-08 16:53:04.084695"], ["updated_at", "2016-02-08 16:53:04.084695"]]
+  [1m[36m (198.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ellis"], ["last_name", "Heathcote"], ["email", "tomas_wuckert@lesch.info"], ["created_at", "2016-02-08 16:53:04.285051"], ["updated_at", "2016-02-08 16:53:04.285051"]]
+  [1m[35m (176.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Green"], ["last_name", "Braun"], ["email", "myriam@oconner.biz"], ["created_at", "2016-02-08 16:53:04.463340"], ["updated_at", "2016-02-08 16:53:04.463340"]]
+  [1m[36m (199.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Colton"], ["last_name", "Paucek"], ["email", "chaz@bernier.net"], ["created_at", "2016-02-08 16:53:04.664901"], ["updated_at", "2016-02-08 16:53:04.664901"]]
+  [1m[35m (176.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Carole"], ["last_name", "Sanford"], ["email", "tara@morarrenner.io"], ["created_at", "2016-02-08 16:53:04.843389"], ["updated_at", "2016-02-08 16:53:04.843389"]]
+  [1m[36m (197.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Scot"], ["last_name", "Cummings"], ["email", "johanna@connellyboehm.io"], ["created_at", "2016-02-08 16:53:05.043771"], ["updated_at", "2016-02-08 16:53:05.043771"]]
+  [1m[35m (175.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Haleigh"], ["last_name", "Smitham"], ["email", "estel.spinka@steuber.org"], ["created_at", "2016-02-08 16:53:05.221880"], ["updated_at", "2016-02-08 16:53:05.221880"]]
+  [1m[36m (197.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Adriana"], ["last_name", "Spinka"], ["email", "efrain.nolan@vongleichner.biz"], ["created_at", "2016-02-08 16:53:05.422197"], ["updated_at", "2016-02-08 16:53:05.422197"]]
+  [1m[35m (175.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Myrl"], ["last_name", "Franecki"], ["email", "tevin_koelpin@mayer.co"], ["created_at", "2016-02-08 16:53:05.600406"], ["updated_at", "2016-02-08 16:53:05.600406"]]
+  [1m[36m (198.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Billie"], ["last_name", "Mayert"], ["email", "raleigh.eichmann@green.biz"], ["created_at", "2016-02-08 16:53:05.800793"], ["updated_at", "2016-02-08 16:53:05.800793"]]
+  [1m[35m (153.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "employees"."id" FROM "employees"[0m
+  [1m[36m (162.6ms)[0m  [1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (177.2ms)[0m  CREATE TABLE "progress_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "author_id" integer, "team_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (176.4ms)[0m  [1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "owner_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (197.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (177.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (178.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160208162920')
+  [1m[36m (166.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160208161820')[0m
+  [1m[35m (200.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160208162547')
+  [1m[36m (221.6ms)[0m  [1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (166.5ms)[0m  CREATE TABLE "progress_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "author_id" integer, "team_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (211.0ms)[0m  [1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "owner_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (188.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (210.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (211.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160208162920')
+  [1m[36m (190.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160208161820')[0m
+  [1m[35m (189.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160208162547')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mProgressReport Load (0.2ms)[0m  SELECT "progress_reports".* FROM "progress_reports"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Maximillian"], ["last_name", "Haley"], ["email", "oswaldo_kohler@tillmanlarkin.co"], ["created_at", "2016-02-08 16:58:12.080864"], ["updated_at", "2016-02-08 16:58:12.080864"]]
+  [1m[36m (179.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Tiara"], ["last_name", "Gibson"], ["email", "leie_larkin@bode.org"], ["created_at", "2016-02-08 16:58:12.265349"], ["updated_at", "2016-02-08 16:58:12.265349"]]
+  [1m[35m (184.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Dusty"], ["last_name", "Blanda"], ["email", "fannie@wehnerwill.co"], ["created_at", "2016-02-08 16:58:12.452945"], ["updated_at", "2016-02-08 16:58:12.452945"]]
+  [1m[36m (154.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Reyna"], ["last_name", "Bergstrom"], ["email", "alex@leuschke.info"], ["created_at", "2016-02-08 16:58:12.608922"], ["updated_at", "2016-02-08 16:58:12.608922"]]
+  [1m[35m (187.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Sigmund"], ["last_name", "Kreiger"], ["email", "jedidiah.okeefe@conroy.co"], ["created_at", "2016-02-08 16:58:12.798320"], ["updated_at", "2016-02-08 16:58:12.798320"]]
+  [1m[36m (165.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Helmer"], ["last_name", "Treutel"], ["email", "guadalupe@bauch.io"], ["created_at", "2016-02-08 16:58:12.965437"], ["updated_at", "2016-02-08 16:58:12.965437"]]
+  [1m[35m (187.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Ashleigh"], ["last_name", "Feil"], ["email", "shanon@ferrystrosin.io"], ["created_at", "2016-02-08 16:58:13.154757"], ["updated_at", "2016-02-08 16:58:13.154757"]]
+  [1m[36m (165.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Imani"], ["last_name", "Cruickshank"], ["email", "dayana@stanton.net"], ["created_at", "2016-02-08 16:58:13.321837"], ["updated_at", "2016-02-08 16:58:13.321837"]]
+  [1m[35m (187.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Mina"], ["last_name", "Baumbach"], ["email", "wade_turcotte@wittingdooley.co"], ["created_at", "2016-02-08 16:58:13.511202"], ["updated_at", "2016-02-08 16:58:13.511202"]]
+  [1m[36m (155.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Kaleigh"], ["last_name", "Marks"], ["email", "duncan@hilpert.info"], ["created_at", "2016-02-08 16:58:13.668273"], ["updated_at", "2016-02-08 16:58:13.668273"]]
+  [1m[35m (187.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Lisa"], ["last_name", "Lowe"], ["email", "mervin.spinka@bayer.co"], ["created_at", "2016-02-08 16:58:13.857637"], ["updated_at", "2016-02-08 16:58:13.857637"]]
+  [1m[36m (176.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Damion"], ["last_name", "Bogisich"], ["email", "raoul.altenwerth@botsfordbalistreri.info"], ["created_at", "2016-02-08 16:58:14.035954"], ["updated_at", "2016-02-08 16:58:14.035954"]]
+  [1m[35m (198.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Otto"], ["last_name", "Beahan"], ["email", "antone@wolff.info"], ["created_at", "2016-02-08 16:58:14.236278"], ["updated_at", "2016-02-08 16:58:14.236278"]]
+  [1m[36m (187.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Shanie"], ["last_name", "Weber"], ["email", "lew.aufderhar@reichelmorar.org"], ["created_at", "2016-02-08 16:58:14.425710"], ["updated_at", "2016-02-08 16:58:14.425710"]]
+  [1m[35m (209.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Frederick"], ["last_name", "Hudson"], ["email", "estella.kutch@stanton.biz"], ["created_at", "2016-02-08 16:58:14.637149"], ["updated_at", "2016-02-08 16:58:14.637149"]]
+  [1m[36m (187.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Maxine"], ["last_name", "Ebert"], ["email", "luciano.ruel@swift.info"], ["created_at", "2016-02-08 16:58:14.826767"], ["updated_at", "2016-02-08 16:58:14.826767"]]
+  [1m[35m (187.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Justyn"], ["last_name", "Goodwin"], ["email", "josiah@bergstrom.co"], ["created_at", "2016-02-08 16:58:15.015843"], ["updated_at", "2016-02-08 16:58:15.015843"]]
+  [1m[36m (187.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Brooke"], ["last_name", "Oberbrunner"], ["email", "harvey.borer@harris.biz"], ["created_at", "2016-02-08 16:58:15.205063"], ["updated_at", "2016-02-08 16:58:15.205063"]]
+  [1m[35m (198.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Camron"], ["last_name", "Wuckert"], ["email", "alexie_cruickshank@balistreristreich.com"], ["created_at", "2016-02-08 16:58:15.405463"], ["updated_at", "2016-02-08 16:58:15.405463"]]
+  [1m[36m (177.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Alessia"], ["last_name", "Kunze"], ["email", "maud_mann@lemkehahn.org"], ["created_at", "2016-02-08 16:58:15.585070"], ["updated_at", "2016-02-08 16:58:15.585070"]]
+  [1m[35m (197.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "employees"."id" FROM "employees"[0m
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 1]]
+  [1m[36m (307.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 2]]
+  [1m[35m (167.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 3]]
+  [1m[36m (199.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 4]]
+  [1m[35m (188.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 5]]
+  [1m[36m (210.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 6]]
+  [1m[35m (188.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 7]]
+  [1m[36m (210.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 8]]
+  [1m[35m (188.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 9]]
+  [1m[36m (210.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 10]]
+  [1m[35m (177.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 11]]
+  [1m[36m (155.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 12]]
+  [1m[35m (156.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 13]]
+  [1m[36m (224.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 14]]
+  [1m[35m (208.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 15]]
+  [1m[36m (188.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 16]]
+  [1m[35m (166.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 17]]
+  [1m[36m (421.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 18]]
+  [1m[35m (165.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 19]]
+  [1m[36m (176.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 20]]
+  [1m[35m (143.6ms)[0m  commit transaction
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mProgressReport Load (0.1ms)[0m  SELECT "progress_reports".* FROM "progress_reports"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Erich"], ["last_name", "Stehr"], ["email", "jan@casper.io"], ["created_at", "2016-02-08 16:58:37.818386"], ["updated_at", "2016-02-08 16:58:37.818386"]]
+  [1m[36m (148.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gabe"], ["last_name", "Bergstrom"], ["email", "maritza@donnelly.com"], ["created_at", "2016-02-08 16:58:37.969252"], ["updated_at", "2016-02-08 16:58:37.969252"]]
+  [1m[35m (165.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Noe"], ["last_name", "Moen"], ["email", "consuelo@krisruel.io"], ["created_at", "2016-02-08 16:58:38.137227"], ["updated_at", "2016-02-08 16:58:38.137227"]]
+  [1m[36m (165.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Jayden"], ["last_name", "Hettinger"], ["email", "paige@schmitt.com"], ["created_at", "2016-02-08 16:58:38.304525"], ["updated_at", "2016-02-08 16:58:38.304525"]]
+  [1m[35m (187.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Rossie"], ["last_name", "Barton"], ["email", "neoma.herzog@gutkowski.com"], ["created_at", "2016-02-08 16:58:38.493740"], ["updated_at", "2016-02-08 16:58:38.493740"]]
+  [1m[36m (165.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Lonny"], ["last_name", "Streich"], ["email", "joe_considine@turner.org"], ["created_at", "2016-02-08 16:58:38.660865"], ["updated_at", "2016-02-08 16:58:38.660865"]]
+  [1m[35m (187.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Blaise"], ["last_name", "Wiza"], ["email", "arianna_cummerata@marquardtlubowitz.info"], ["created_at", "2016-02-08 16:58:38.850194"], ["updated_at", "2016-02-08 16:58:38.850194"]]
+  [1m[36m (164.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Myrtie"], ["last_name", "Turner"], ["email", "imogene@heathcotewitting.info"], ["created_at", "2016-02-08 16:58:39.017097"], ["updated_at", "2016-02-08 16:58:39.017097"]]
+  [1m[35m (187.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Nedra"], ["last_name", "Schoen"], ["email", "miles_kshlerin@swaniawski.net"], ["created_at", "2016-02-08 16:58:39.206546"], ["updated_at", "2016-02-08 16:58:39.206546"]]
+  [1m[36m (142.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Harold"], ["last_name", "Wehner"], ["email", "kaya_miller@kuvalis.net"], ["created_at", "2016-02-08 16:58:39.351365"], ["updated_at", "2016-02-08 16:58:39.351365"]]
+  [1m[35m (154.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Luis"], ["last_name", "Reichert"], ["email", "juanita@buckridgetremblay.org"], ["created_at", "2016-02-08 16:58:39.507440"], ["updated_at", "2016-02-08 16:58:39.507440"]]
+  [1m[36m (209.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Joshuah"], ["last_name", "Stiedemann"], ["email", "allison@padbergbrown.net"], ["created_at", "2016-02-08 16:58:39.718995"], ["updated_at", "2016-02-08 16:58:39.718995"]]
+  [1m[35m (199.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Mossie"], ["last_name", "Langosh"], ["email", "ronny@mills.name"], ["created_at", "2016-02-08 16:58:39.920843"], ["updated_at", "2016-02-08 16:58:39.920843"]]
+  [1m[36m (208.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Shana"], ["last_name", "Collier"], ["email", "karianne.ruecker@gleichnerluettgen.io"], ["created_at", "2016-02-08 16:58:40.134248"], ["updated_at", "2016-02-08 16:58:40.134248"]]
+  [1m[35m (183.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Abel"], ["last_name", "Gutmann"], ["email", "cristina.casper@brown.net"], ["created_at", "2016-02-08 16:58:40.322303"], ["updated_at", "2016-02-08 16:58:40.322303"]]
+  [1m[36m (207.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Frances"], ["last_name", "Gusikowski"], ["email", "arely.schaden@parker.org"], ["created_at", "2016-02-08 16:58:40.532668"], ["updated_at", "2016-02-08 16:58:40.532668"]]
+  [1m[35m (187.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Lawson"], ["last_name", "Pouros"], ["email", "laurie_becker@schmidt.biz"], ["created_at", "2016-02-08 16:58:40.722438"], ["updated_at", "2016-02-08 16:58:40.722438"]]
+  [1m[36m (197.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Alysha"], ["last_name", "Parker"], ["email", "malinda@kuhn.net"], ["created_at", "2016-02-08 16:58:40.922684"], ["updated_at", "2016-02-08 16:58:40.922684"]]
+  [1m[35m (153.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Nia"], ["last_name", "Swaniawski"], ["email", "claude@leffler.org"], ["created_at", "2016-02-08 16:58:41.078493"], ["updated_at", "2016-02-08 16:58:41.078493"]]
+  [1m[36m (153.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Mauricio"], ["last_name", "Reynolds"], ["email", "abe@jacobson.com"], ["created_at", "2016-02-08 16:58:41.234562"], ["updated_at", "2016-02-08 16:58:41.234562"]]
+  [1m[35m (175.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "employees"."id" FROM "employees"[0m
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Stringtough"], ["owner_id", 33], ["created_at", "2016-02-08 16:58:41.427608"], ["updated_at", "2016-02-08 16:58:41.427608"]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (207.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (188.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateEmployees (20160208161820)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160208161820"]]
+  [1m[35m (174.3ms)[0m  commit transaction
+Migrating to CreateTeams (20160208162547)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "owner_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160208162547"]]
+  [1m[35m (200.4ms)[0m  commit transaction
+Migrating to CreateProgressReports (20160208162920)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "progress_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "author_id" integer, "team_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160208162920"]]
+  [1m[35m (717.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mProgressReport Load (0.2ms)[0m  SELECT "progress_reports".* FROM "progress_reports"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Louisa"], ["last_name", "Bernier"], ["email", "ida_smitham@funkcain.co"], ["created_at", "2016-02-08 17:00:02.014612"], ["updated_at", "2016-02-08 17:00:02.014612"]]
+  [1m[36m (188.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Orie"], ["last_name", "Abshire"], ["email", "jay_baumbach@turcotte.org"], ["created_at", "2016-02-08 17:00:02.207856"], ["updated_at", "2016-02-08 17:00:02.207856"]]
+  [1m[35m (196.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Joana"], ["last_name", "Adams"], ["email", "ethan_mante@tillmankshlerin.info"], ["created_at", "2016-02-08 17:00:02.407274"], ["updated_at", "2016-02-08 17:00:02.407274"]]
+  [1m[36m (176.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Athena"], ["last_name", "Pagac"], ["email", "brionna@pfannerstillzboncak.biz"], ["created_at", "2016-02-08 17:00:02.585775"], ["updated_at", "2016-02-08 17:00:02.585775"]]
+  [1m[35m (198.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Aurelia"], ["last_name", "O'Connell"], ["email", "lois.white@satterfield.co"], ["created_at", "2016-02-08 17:00:02.786222"], ["updated_at", "2016-02-08 17:00:02.786222"]]
+  [1m[36m (176.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Kenton"], ["last_name", "Ankunding"], ["email", "tanya_balistreri@hermannoconnell.io"], ["created_at", "2016-02-08 17:00:02.964262"], ["updated_at", "2016-02-08 17:00:02.964262"]]
+  [1m[35m (198.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Wilfredo"], ["last_name", "Blick"], ["email", "ernestine@wisozk.co"], ["created_at", "2016-02-08 17:00:03.164799"], ["updated_at", "2016-02-08 17:00:03.164799"]]
+  [1m[36m (176.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Lauryn"], ["last_name", "Hills"], ["email", "meghan@doyleemard.info"], ["created_at", "2016-02-08 17:00:03.343335"], ["updated_at", "2016-02-08 17:00:03.343335"]]
+  [1m[35m (198.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Amanda"], ["last_name", "Bernhard"], ["email", "osbaldo@maggio.io"], ["created_at", "2016-02-08 17:00:03.543919"], ["updated_at", "2016-02-08 17:00:03.543919"]]
+  [1m[36m (165.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Guy"], ["last_name", "Feil"], ["email", "lesley@gibson.biz"], ["created_at", "2016-02-08 17:00:03.712083"], ["updated_at", "2016-02-08 17:00:03.712083"]]
+  [1m[35m (197.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Roselyn"], ["last_name", "Bradtke"], ["email", "dana_blanda@howelang.com"], ["created_at", "2016-02-08 17:00:03.912598"], ["updated_at", "2016-02-08 17:00:03.912598"]]
+  [1m[36m (175.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Rusty"], ["last_name", "Davis"], ["email", "silas_gerlach@thompson.info"], ["created_at", "2016-02-08 17:00:04.091492"], ["updated_at", "2016-02-08 17:00:04.091492"]]
+  [1m[35m (196.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Thalia"], ["last_name", "Tremblay"], ["email", "aiyana@wiegand.info"], ["created_at", "2016-02-08 17:00:04.290959"], ["updated_at", "2016-02-08 17:00:04.290959"]]
+  [1m[36m (176.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Monserrat"], ["last_name", "Aufderhar"], ["email", "savannah@ullrich.info"], ["created_at", "2016-02-08 17:00:04.469497"], ["updated_at", "2016-02-08 17:00:04.469497"]]
+  [1m[35m (319.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Lavina"], ["last_name", "Paucek"], ["email", "mathew@shieldshyatt.name"], ["created_at", "2016-02-08 17:00:04.791885"], ["updated_at", "2016-02-08 17:00:04.791885"]]
+  [1m[36m (175.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Nash"], ["last_name", "Leannon"], ["email", "lyla_gibson@heaney.biz"], ["created_at", "2016-02-08 17:00:04.969534"], ["updated_at", "2016-02-08 17:00:04.969534"]]
+  [1m[35m (198.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Grover"], ["last_name", "Friesen"], ["email", "tristin@quigleymayert.co"], ["created_at", "2016-02-08 17:00:05.170289"], ["updated_at", "2016-02-08 17:00:05.170289"]]
+  [1m[36m (175.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Berry"], ["last_name", "Dickens"], ["email", "kimberly_langworth@cormiersanford.name"], ["created_at", "2016-02-08 17:00:05.348538"], ["updated_at", "2016-02-08 17:00:05.348538"]]
+  [1m[35m (187.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Myah"], ["last_name", "Keeling"], ["email", "burdette_pollich@jakubowskikeeling.net"], ["created_at", "2016-02-08 17:00:05.537975"], ["updated_at", "2016-02-08 17:00:05.537975"]]
+  [1m[36m (176.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Loraine"], ["last_name", "Lang"], ["email", "gillian.herzog@gleason.co"], ["created_at", "2016-02-08 17:00:05.717068"], ["updated_at", "2016-02-08 17:00:05.717068"]]
+  [1m[35m (198.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "employees"."id" FROM "employees"[0m
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Lotstring"], ["owner_id", 17], ["created_at", "2016-02-08 17:00:05.932301"], ["updated_at", "2016-02-08 17:00:05.932301"]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 1]]
+  [1m[36m (272.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 2]]
+  [1m[35m (177.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 3]]
+  [1m[36m (198.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 4]]
+  [1m[35m (177.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 5]]
+  [1m[36m (198.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 6]]
+  [1m[35m (177.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 7]]
+  [1m[36m (200.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 8]]
+  [1m[35m (177.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 9]]
+  [1m[36m (199.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 10]]
+  [1m[35m (198.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 11]]
+  [1m[36m (177.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 12]]
+  [1m[35m (188.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 13]]
+  [1m[36m (166.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 14]]
+  [1m[35m (143.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 15]]
+  [1m[36m (188.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 16]]
+  [1m[35m (166.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 17]]
+  [1m[36m (189.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 18]]
+  [1m[35m (154.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 19]]
+  [1m[36m (154.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 20]]
+  [1m[35m (188.0ms)[0m  commit transaction
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mProgressReport Load (0.1ms)[0m  SELECT "progress_reports".* FROM "progress_reports"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Lee"], ["last_name", "Crist"], ["email", "ricardo@jenkinskirlin.name"], ["created_at", "2016-02-08 17:01:05.852527"], ["updated_at", "2016-02-08 17:01:05.852527"]]
+  [1m[36m (188.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Obie"], ["last_name", "Kub"], ["email", "king_rowe@leannon.name"], ["created_at", "2016-02-08 17:01:06.045044"], ["updated_at", "2016-02-08 17:01:06.045044"]]
+  [1m[35m (195.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Ruthe"], ["last_name", "Reynolds"], ["email", "fausto.berge@thompsonbruen.co"], ["created_at", "2016-02-08 17:01:06.244178"], ["updated_at", "2016-02-08 17:01:06.244178"]]
+  [1m[36m (175.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Stacey"], ["last_name", "Braun"], ["email", "lorine@gusikowski.co"], ["created_at", "2016-02-08 17:01:06.422515"], ["updated_at", "2016-02-08 17:01:06.422515"]]
+  [1m[35m (186.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Carolina"], ["last_name", "Cummings"], ["email", "clinton_kuhn@kshlerin.name"], ["created_at", "2016-02-08 17:01:06.611677"], ["updated_at", "2016-02-08 17:01:06.611677"]]
+  [1m[36m (175.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Janick"], ["last_name", "Gutkowski"], ["email", "heidi_lueilwitz@hartmannsatterfield.org"], ["created_at", "2016-02-08 17:01:06.789834"], ["updated_at", "2016-02-08 17:01:06.789834"]]
+  [1m[35m (197.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Raquel"], ["last_name", "Nitzsche"], ["email", "henderson@strackehermiston.biz"], ["created_at", "2016-02-08 17:01:06.990203"], ["updated_at", "2016-02-08 17:01:06.990203"]]
+  [1m[36m (177.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Vida"], ["last_name", "Torp"], ["email", "dereck.kunde@ornchristiansen.com"], ["created_at", "2016-02-08 17:01:07.169181"], ["updated_at", "2016-02-08 17:01:07.169181"]]
+  [1m[35m (198.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Jeramie"], ["last_name", "Dare"], ["email", "rosalyn@wardconn.info"], ["created_at", "2016-02-08 17:01:07.369546"], ["updated_at", "2016-02-08 17:01:07.369546"]]
+  [1m[36m (198.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Adelle"], ["last_name", "Emmerich"], ["email", "laurine.macejkovic@ankunding.name"], ["created_at", "2016-02-08 17:01:07.569938"], ["updated_at", "2016-02-08 17:01:07.569938"]]
+  [1m[35m (353.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Janice"], ["last_name", "Bogan"], ["email", "molly@carter.info"], ["created_at", "2016-02-08 17:01:07.926049"], ["updated_at", "2016-02-08 17:01:07.926049"]]
+  [1m[36m (198.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Favian"], ["last_name", "Rowe"], ["email", "patience_hirthe@monahan.name"], ["created_at", "2016-02-08 17:01:08.126748"], ["updated_at", "2016-02-08 17:01:08.126748"]]
+  [1m[35m (153.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Laurine"], ["last_name", "Breitenberg"], ["email", "milton.greenholt@little.net"], ["created_at", "2016-02-08 17:01:08.282343"], ["updated_at", "2016-02-08 17:01:08.282343"]]
+  [1m[36m (176.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Kailee"], ["last_name", "Roberts"], ["email", "maximo_boyle@koch.net"], ["created_at", "2016-02-08 17:01:08.460958"], ["updated_at", "2016-02-08 17:01:08.460958"]]
+  [1m[35m (198.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Dortha"], ["last_name", "Jerde"], ["email", "cecile@raynor.com"], ["created_at", "2016-02-08 17:01:08.661236"], ["updated_at", "2016-02-08 17:01:08.661236"]]
+  [1m[36m (176.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ellen"], ["last_name", "Heidenreich"], ["email", "tavares@walter.io"], ["created_at", "2016-02-08 17:01:08.839432"], ["updated_at", "2016-02-08 17:01:08.839432"]]
+  [1m[35m (199.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Tate"], ["last_name", "Spinka"], ["email", "maureen.hermiston@mcculloughprohaska.info"], ["created_at", "2016-02-08 17:01:09.040946"], ["updated_at", "2016-02-08 17:01:09.040946"]]
+  [1m[36m (176.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Dean"], ["last_name", "Mayert"], ["email", "korey.gislason@satterfieldwyman.io"], ["created_at", "2016-02-08 17:01:09.219155"], ["updated_at", "2016-02-08 17:01:09.219155"]]
+  [1m[35m (198.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Tillman"], ["last_name", "Brekke"], ["email", "efren@macgyversipes.name"], ["created_at", "2016-02-08 17:01:09.419556"], ["updated_at", "2016-02-08 17:01:09.419556"]]
+  [1m[36m (187.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Loy"], ["last_name", "Kohler"], ["email", "ezekiel@baumbach.net"], ["created_at", "2016-02-08 17:01:09.608658"], ["updated_at", "2016-02-08 17:01:09.608658"]]
+  [1m[35m (198.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "employees"."id" FROM "employees"[0m
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 21]]
+  [1m[36m (172.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 22]]
+  [1m[35m (199.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 23]]
+  [1m[36m (176.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 24]]
+  [1m[35m (232.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 25]]
+  [1m[36m (290.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 26]]
+  [1m[35m (175.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 27]]
+  [1m[36m (199.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 28]]
+  [1m[35m (154.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 29]]
+  [1m[36m (266.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 30]]
+  [1m[35m (177.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 31]]
+  [1m[36m (568.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 32]]
+  [1m[35m (416.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 33]]
+  [1m[36m (166.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 34]]
+  [1m[35m (166.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 35]]
+  [1m[36m (166.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 36]]
+  [1m[35m (188.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 37]]
+  [1m[36m (166.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 38]]
+  [1m[35m (144.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 39]]
+  [1m[36m (155.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 40]]
+  [1m[35m (188.4ms)[0m  commit transaction
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mProgressReport Load (0.2ms)[0m  SELECT "progress_reports".* FROM "progress_reports"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Titus"], ["last_name", "Purdy"], ["email", "adolfo@lehnerlowe.org"], ["created_at", "2016-02-08 17:01:56.370586"], ["updated_at", "2016-02-08 17:01:56.370586"]]
+  [1m[36m (192.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Estelle"], ["last_name", "O'Connell"], ["email", "lauryn_grady@ward.info"], ["created_at", "2016-02-08 17:01:56.566069"], ["updated_at", "2016-02-08 17:01:56.566069"]]
+  [1m[35m (196.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Wendell"], ["last_name", "Nienow"], ["email", "jennie@goldner.co"], ["created_at", "2016-02-08 17:01:56.765711"], ["updated_at", "2016-02-08 17:01:56.765711"]]
+  [1m[36m (177.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Pedro"], ["last_name", "Barton"], ["email", "alisa_bradtke@wilderman.com"], ["created_at", "2016-02-08 17:01:56.945336"], ["updated_at", "2016-02-08 17:01:56.945336"]]
+  [1m[35m (198.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Branson"], ["last_name", "Hermann"], ["email", "chaya_wunsch@hane.co"], ["created_at", "2016-02-08 17:01:57.146046"], ["updated_at", "2016-02-08 17:01:57.146046"]]
+  [1m[36m (175.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Vivienne"], ["last_name", "Mueller"], ["email", "jedediah.prosacco@nolandonnelly.net"], ["created_at", "2016-02-08 17:01:57.323691"], ["updated_at", "2016-02-08 17:01:57.323691"]]
+  [1m[35m (198.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Kurt"], ["last_name", "Blanda"], ["email", "damion_labadie@kozeylebsack.com"], ["created_at", "2016-02-08 17:01:57.524112"], ["updated_at", "2016-02-08 17:01:57.524112"]]
+  [1m[36m (153.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Emely"], ["last_name", "Walter"], ["email", "hans@boehm.org"], ["created_at", "2016-02-08 17:01:57.680007"], ["updated_at", "2016-02-08 17:01:57.680007"]]
+  [1m[35m (153.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Ana"], ["last_name", "Schroeder"], ["email", "brennon.marvin@schneiderweimann.co"], ["created_at", "2016-02-08 17:01:57.835910"], ["updated_at", "2016-02-08 17:01:57.835910"]]
+  [1m[36m (176.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Lester"], ["last_name", "Welch"], ["email", "ottis@lang.info"], ["created_at", "2016-02-08 17:01:58.014079"], ["updated_at", "2016-02-08 17:01:58.014079"]]
+  [1m[35m (198.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Dorris"], ["last_name", "Conn"], ["email", "glenna@windlerharris.com"], ["created_at", "2016-02-08 17:01:58.214539"], ["updated_at", "2016-02-08 17:01:58.214539"]]
+  [1m[36m (176.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Joe"], ["last_name", "Witting"], ["email", "nona_ruel@heidenreich.com"], ["created_at", "2016-02-08 17:01:58.392690"], ["updated_at", "2016-02-08 17:01:58.392690"]]
+  [1m[35m (198.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Irving"], ["last_name", "Murray"], ["email", "kaela@batz.io"], ["created_at", "2016-02-08 17:01:58.593036"], ["updated_at", "2016-02-08 17:01:58.593036"]]
+  [1m[36m (177.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Libby"], ["last_name", "Corkery"], ["email", "boyd.deckow@schaden.io"], ["created_at", "2016-02-08 17:01:58.772385"], ["updated_at", "2016-02-08 17:01:58.772385"]]
+  [1m[35m (198.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Morgan"], ["last_name", "Kilback"], ["email", "jean@schowalter.org"], ["created_at", "2016-02-08 17:01:58.972774"], ["updated_at", "2016-02-08 17:01:58.972774"]]
+  [1m[36m (176.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Irwin"], ["last_name", "Gusikowski"], ["email", "jordyn.mcdermott@schiller.com"], ["created_at", "2016-02-08 17:01:59.150903"], ["updated_at", "2016-02-08 17:01:59.150903"]]
+  [1m[35m (198.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Jesse"], ["last_name", "O'Reilly"], ["email", "alford@lindgrengorczany.co"], ["created_at", "2016-02-08 17:01:59.351303"], ["updated_at", "2016-02-08 17:01:59.351303"]]
+  [1m[36m (165.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Rosetta"], ["last_name", "Auer"], ["email", "bethel.beier@hyatt.co"], ["created_at", "2016-02-08 17:01:59.518337"], ["updated_at", "2016-02-08 17:01:59.518337"]]
+  [1m[35m (154.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Kaycee"], ["last_name", "Spinka"], ["email", "chelsie@klein.co"], ["created_at", "2016-02-08 17:01:59.674301"], ["updated_at", "2016-02-08 17:01:59.674301"]]
+  [1m[36m (176.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Berneice"], ["last_name", "Turcotte"], ["email", "lon@bechtelar.info"], ["created_at", "2016-02-08 17:01:59.852406"], ["updated_at", "2016-02-08 17:01:59.852406"]]
+  [1m[35m (198.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "employees"."id" FROM "employees"[0m
+  [1m[35m (0.1ms)[0m  SELECT "employees"."id" FROM "employees"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 41]]
+  [1m[36m (171.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 42]]
+  [1m[35m (198.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 43]]
+  [1m[36m (177.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 44]]
+  [1m[35m (199.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 45]]
+  [1m[36m (177.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 46]]
+  [1m[35m (199.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 47]]
+  [1m[36m (177.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 48]]
+  [1m[35m (199.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 49]]
+  [1m[36m (177.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 50]]
+  [1m[35m (189.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 51]]
+  [1m[36m (177.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 52]]
+  [1m[35m (188.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 53]]
+  [1m[36m (166.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 54]]
+  [1m[35m (188.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 55]]
+  [1m[36m (188.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 56]]
+  [1m[35m (188.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 57]]
+  [1m[36m (166.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 58]]
+  [1m[35m (188.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 59]]
+  [1m[36m (166.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 60]]
+  [1m[35m (189.5ms)[0m  commit transaction
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mProgressReport Load (11.4ms)[0m  SELECT "progress_reports".* FROM "progress_reports"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Deanna"], ["last_name", "Lynch"], ["email", "marisa.marvin@altenwerth.com"], ["created_at", "2016-02-08 17:03:00.582163"], ["updated_at", "2016-02-08 17:03:00.582163"]]
+  [1m[36m (339.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Maybelle"], ["last_name", "Hayes"], ["email", "eleanore@wiza.com"], ["created_at", "2016-02-08 17:03:00.924236"], ["updated_at", "2016-02-08 17:03:00.924236"]]
+  [1m[35m (176.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Noemy"], ["last_name", "Luettgen"], ["email", "velma@runolfon.org"], ["created_at", "2016-02-08 17:03:01.102231"], ["updated_at", "2016-02-08 17:03:01.102231"]]
+  [1m[36m (198.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Adolph"], ["last_name", "Reichert"], ["email", "yasmine.sipes@kunde.io"], ["created_at", "2016-02-08 17:03:01.302722"], ["updated_at", "2016-02-08 17:03:01.302722"]]
+  [1m[35m (176.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Aleen"], ["last_name", "Leannon"], ["email", "layla@yost.net"], ["created_at", "2016-02-08 17:03:01.480879"], ["updated_at", "2016-02-08 17:03:01.480879"]]
+  [1m[36m (198.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Caleigh"], ["last_name", "Gutmann"], ["email", "nestor@wolffgaylord.biz"], ["created_at", "2016-02-08 17:03:01.681230"], ["updated_at", "2016-02-08 17:03:01.681230"]]
+  [1m[35m (176.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Eliane"], ["last_name", "Waters"], ["email", "adelbert.wiegand@kuhn.org"], ["created_at", "2016-02-08 17:03:01.859459"], ["updated_at", "2016-02-08 17:03:01.859459"]]
+  [1m[36m (265.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Caesar"], ["last_name", "Rau"], ["email", "norbert.lubowitz@watsica.biz"], ["created_at", "2016-02-08 17:03:02.126899"], ["updated_at", "2016-02-08 17:03:02.126899"]]
+  [1m[35m (176.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Victoria"], ["last_name", "Swift"], ["email", "elda@mraz.name"], ["created_at", "2016-02-08 17:03:02.304992"], ["updated_at", "2016-02-08 17:03:02.304992"]]
+  [1m[36m (188.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Mohammad"], ["last_name", "Ratke"], ["email", "britney_barrows@skiles.info"], ["created_at", "2016-02-08 17:03:02.495600"], ["updated_at", "2016-02-08 17:03:02.495600"]]
+  [1m[35m (176.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Ernie"], ["last_name", "Pfeffer"], ["email", "toney_shields@gorczany.info"], ["created_at", "2016-02-08 17:03:02.673702"], ["updated_at", "2016-02-08 17:03:02.673702"]]
+  [1m[36m (209.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Candelario"], ["last_name", "Labadie"], ["email", "jermain@volkman.org"], ["created_at", "2016-02-08 17:03:02.885520"], ["updated_at", "2016-02-08 17:03:02.885520"]]
+  [1m[35m (175.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Elena"], ["last_name", "Hermann"], ["email", "margarette_rolfson@morar.com"], ["created_at", "2016-02-08 17:03:03.063447"], ["updated_at", "2016-02-08 17:03:03.063447"]]
+  [1m[36m (198.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Virgil"], ["last_name", "Spinka"], ["email", "verdie@lind.co"], ["created_at", "2016-02-08 17:03:03.264034"], ["updated_at", "2016-02-08 17:03:03.264034"]]
+  [1m[35m (175.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Durward"], ["last_name", "Mraz"], ["email", "colton_windler@weinat.org"], ["created_at", "2016-02-08 17:03:03.441981"], ["updated_at", "2016-02-08 17:03:03.441981"]]
+  [1m[36m (198.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Chloe"], ["last_name", "Yost"], ["email", "wilber@schamberger.co"], ["created_at", "2016-02-08 17:03:03.642378"], ["updated_at", "2016-02-08 17:03:03.642378"]]
+  [1m[35m (176.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Amalia"], ["last_name", "Bergnaum"], ["email", "daryl@toy.io"], ["created_at", "2016-02-08 17:03:03.820498"], ["updated_at", "2016-02-08 17:03:03.820498"]]
+  [1m[36m (320.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Joshua"], ["last_name", "Rogahn"], ["email", "brennan_green@cruickshankrutherford.info"], ["created_at", "2016-02-08 17:03:04.143283"], ["updated_at", "2016-02-08 17:03:04.143283"]]
+  [1m[35m (152.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Electa"], ["last_name", "McGlynn"], ["email", "maribel@metzyundt.co"], ["created_at", "2016-02-08 17:03:04.298670"], ["updated_at", "2016-02-08 17:03:04.298670"]]
+  [1m[36m (155.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "employees" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Abelardo"], ["last_name", "Gottlieb"], ["email", "carole_jakubowski@kutch.name"], ["created_at", "2016-02-08 17:03:04.455743"], ["updated_at", "2016-02-08 17:03:04.455743"]]
+  [1m[35m (176.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "employees"."id" FROM "employees"[0m
